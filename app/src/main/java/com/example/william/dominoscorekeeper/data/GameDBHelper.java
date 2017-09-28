@@ -23,6 +23,10 @@ public class GameDBHelper extends SQLiteOpenHelper {
                 "player_two_score integer not null , " +
                 "player_three_score integer not null , " +
                 "player_four_score integer not null , " +
+                "player_one_name text not null, " +
+                "player_two_name text not null, " +
+                "player_three_name text not null, " +
+                "player_four_name text not null, " +
                 "gameid integer" +
                 ")";
 
