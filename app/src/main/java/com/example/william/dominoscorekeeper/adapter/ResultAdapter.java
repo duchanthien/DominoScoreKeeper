@@ -82,10 +82,10 @@ public class ResultAdapter extends BaseAdapter {
 
         viewHolder.tvRound.setText(list.get(i).getRoundId() + "");
 
-        viewHolder.tvPlayerOneName.setText(model.getPlayerOneName());
-        viewHolder.tvPlayerTwoName.setText(model.getPlayerTwoName());
-        viewHolder.tvPlayerThreeName.setText(model.getPlayerThreeName());
-        viewHolder.tvPlayerFourName.setText(model.getPlayerFourName());
+        viewHolder.tvPlayerOneName.setText(list.get(i).getPlayerOneName());
+        viewHolder.tvPlayerTwoName.setText(list.get(i).getPlayerTwoName());
+        viewHolder.tvPlayerThreeName.setText(list.get(i).getPlayerThreeName());
+        viewHolder.tvPlayerFourName.setText(list.get(i).getPlayerFourName());
 
         viewHolder.tvPlayerOneScore.setText(String.valueOf(list.get(i).getPlayerOneScore()));
         viewHolder.tvPlayerTwoScore.setText(String.valueOf(list.get(i).getPlayerTwoScore()));

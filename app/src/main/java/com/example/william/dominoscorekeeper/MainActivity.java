@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     GameModel model;
 
+    RelativeLayout container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void initViews() {
+
+        container = (RelativeLayout)findViewById(R.id.container);
+
+        container.setVisibility(View.INVISIBLE);
 
         daoRound = new DaoRound(MainActivity.this);
 
@@ -159,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                             newGame();
                             setPlayerName();
-
+                            container.setVisibility(View.VISIBLE);
                             show.dismiss();
                         }
                     }
@@ -232,27 +238,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void endGame(GameModel model) {
 
+        insertNewRound();
+
         Intent intent = new Intent(MainActivity.this, ResultActivity.class);
         intent.putExtra("gamemodel", model);
         startActivityForResult(intent, 123);
+
+        resetPlayersScore();
+
+        resetPlayersName();
 
     }
 
     public void nextRound() {
         round_count = round_count + 1;
-        tvRound.setText(String.valueOf(round_count));
+        tvRound.setText("Round: "+String.valueOf(round_count));
 
-        Roundmodel roundmodel = new Roundmodel(round_count, playerone_score, playertwo_score, playerthree_score, playerfour_score);
-        daoRound.insertRound(roundmodel, new_game);
+        insertNewRound();
 
         resetPlayersScore();
+    }
+
+    public void insertNewRound(){
+        Roundmodel roundmodel = new Roundmodel(round_count, playerone_score, playertwo_score, playerthree_score, playerfour_score, playerOneName, playerTwoName, playerThreeName, playerFourName);
+        daoRound.insertRound(roundmodel, new_game);
+
     }
 
     public void newGame() {
 
         round_count = 0;
         round_count += 1;
-        tvRound.setText(String.valueOf(round_count));
+        tvRound.setText("Round: "+String.valueOf(round_count));
         resetPlayersScore();
         new_game += 1;
 
@@ -325,6 +342,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvPlayerTwoScore.setText(String.valueOf(playertwo_score));
         tvPlayerThreeScore.setText(String.valueOf(playerthree_score));
         tvPlayerFourScore.setText(String.valueOf(playerfour_score));
+
+
+
+    }
+
+    public void resetPlayersName(){
+
+        playerOneName = " ";
+        playerTwoName = " ";
+        playerThreeName = " ";
+        playerFourName = " ";
+
+        tvPlayerOneName.setText(playerOneName);
+        tvPlayerTwoName.setText(playerTwoName);
+        tvPlayerThreeName.setText(playerThreeName);
+        tvPlayerFourName.setText(playerFourName);
 
     }
 
