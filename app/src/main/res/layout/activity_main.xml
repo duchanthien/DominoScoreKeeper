@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
+    android:id="@+id/container"
     tools:context="com.example.william.dominoscorekeeper.MainActivity">
 
     <TextView
@@ -49,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="0"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold" />
 
             <Button
@@ -87,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="0"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold" />
 
             <Button
@@ -135,7 +138,8 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="0"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold" />
 
             <Button
@@ -173,7 +177,8 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="0"
-                android:textSize="18sp"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textStyle="bold" />
 
             <Button
