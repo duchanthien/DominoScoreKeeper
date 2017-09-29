@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,10 +12,58 @@
         android:orientation="vertical"
         tools:context="com.example.william.dominoscorekeeper.ResultActivity">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_playerone_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Player 1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_playertwo_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Player 1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_playerthree_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Player 1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_playerfour_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Player 1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
         <ListView
             android:id="@+id/listview_result"
             android:layout_width="match_parent"
-            android:layout_height="400dp">
+            android:layout_height="360dp">
 
         </ListView>
 
@@ -22,15 +71,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
             android:text="Final Result"
             android:textSize="20sp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -41,20 +91,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_playerone_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/tv_playerone_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -63,14 +106,6 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tv_playertwo_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_playertwo_score"
@@ -89,14 +124,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_playerthree_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/tv_playerthree_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -113,14 +140,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_playerfour_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Player 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:id="@+id/tv_playerfour_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -131,14 +150,15 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_new_game"
-            android:text="New Game"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
             android:id="@+id/btn_continue"
-            android:text="Continue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Continue" />
+
+        <Button
+            android:id="@+id/btn_end_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Game" />
     </LinearLayout>
 </ScrollView>

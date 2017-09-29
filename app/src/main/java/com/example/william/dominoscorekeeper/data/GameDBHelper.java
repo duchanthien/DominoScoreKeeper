@@ -27,7 +27,8 @@ public class GameDBHelper extends SQLiteOpenHelper {
                 "player_two_name text not null, " +
                 "player_three_name text not null, " +
                 "player_four_name text not null, " +
-                "gameid integer" +
+                "round_count integer, "+
+                "gameid integer " +
                 ")";
 
         sqLiteDatabase.execSQL(sql1);

@@ -27,14 +27,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_playerone_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player 1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
+            <!--  <TextView
+                  android:id="@+id/tv_playerone_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Player 1"
+                  android:textSize="18sp"
+                  android:textStyle="bold" />
+  -->
             <TextView
                 android:id="@+id/tv_playerone_score"
                 android:layout_width="wrap_content"
@@ -50,14 +50,14 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_playertwo_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player 1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--
+                        <TextView
+                            android:id="@+id/tv_playertwo_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Player 1"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />-->
 
             <TextView
                 android:id="@+id/tv_playertwo_score"
@@ -75,13 +75,13 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_playerthree_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player 1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <!--   <TextView
+                   android:id="@+id/tv_playerthree_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Player 1"
+                   android:textSize="18sp"
+                   android:textStyle="bold" />-->
 
             <TextView
                 android:id="@+id/tv_playerthree_score"
@@ -99,14 +99,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_playerfour_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Player 1"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
+            <!--  <TextView
+                  android:id="@+id/tv_playerfour_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Player 1"
+                  android:textSize="18sp"
+                  android:textStyle="bold" />
+  -->
             <TextView
                 android:id="@+id/tv_playerfour_score"
                 android:layout_width="wrap_content"

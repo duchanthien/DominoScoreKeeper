@@ -47,6 +47,7 @@ public class DaoRound {
         values.put("player_two_name", roundmodel.getPlayerTwoName());
         values.put("player_three_name", roundmodel.getPlayerThreeName());
         values.put("player_four_name", roundmodel.getPlayerFourName());
+        values.put("round_count", roundmodel.getRoundCount());
         values.put("gameid", gameid);
 
         long result = db.insert("table_round", null, values);
@@ -90,8 +91,8 @@ public class DaoRound {
                 String playerTwoName = cursor.getString(6);
                 String playerThreeName = cursor.getString(7);
                 String playerFourName = cursor.getString(8);
-
-                Roundmodel roundmodel = new Roundmodel(round, playerOneScore, playerTwoScore, playerThreeScore, playerFourScore, playerOneName, playerTwoName, playerThreeName, playerFourName);
+                int roundCount = cursor.getInt(9);
+                Roundmodel roundmodel = new Roundmodel(round, playerOneScore, playerTwoScore, playerThreeScore, playerFourScore, playerOneName, playerTwoName, playerThreeName, playerFourName, roundCount);
                 roundmodels.add(roundmodel);
 
             } while (cursor.moveToNext());

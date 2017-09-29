@@ -17,6 +17,15 @@ public class Roundmodel implements Serializable {
     private String playerThreeName;
     private String playerFourName;
     private int gameId;
+    private int roundCount;
+
+    public int getRoundCount() {
+        return roundCount;
+    }
+
+    public void setRoundCount(int roundCount) {
+        this.roundCount = roundCount;
+    }
 
     public Roundmodel() {
 
@@ -46,7 +55,7 @@ public class Roundmodel implements Serializable {
         this.gameId = gameId;
     }
 
-    public Roundmodel(int roundId, int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int gameId) {
+    public Roundmodel(int roundId, int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int gameId, int roundCount) {
         this.roundId = roundId;
         this.playerOneScore = playerOneScore;
         this.playerTwoScore = playerTwoScore;
@@ -57,9 +66,10 @@ public class Roundmodel implements Serializable {
         this.playerThreeName = playerThreeName;
         this.playerFourName = playerFourName;
         this.gameId = gameId;
+        this.roundCount = roundCount;
     }
 
-    public Roundmodel(int roundId, int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName) {
+    public Roundmodel(int roundId, int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int roundCount) {
         this.roundId = roundId;
         this.playerOneScore = playerOneScore;
         this.playerTwoScore = playerTwoScore;
@@ -69,9 +79,10 @@ public class Roundmodel implements Serializable {
         this.playerTwoName = playerTwoName;
         this.playerThreeName = playerThreeName;
         this.playerFourName = playerFourName;
+        this.roundCount = roundCount;
     }
 
-    public Roundmodel(int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int gameId) {
+    public Roundmodel(int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int gameId, int roundCount) {
         this.playerOneScore = playerOneScore;
         this.playerTwoScore = playerTwoScore;
         this.playerThreeScore = playerThreeScore;
@@ -81,6 +92,18 @@ public class Roundmodel implements Serializable {
         this.playerThreeName = playerThreeName;
         this.playerFourName = playerFourName;
         this.gameId = gameId;
+        this.roundCount = roundCount;
+    }
+    public Roundmodel(int playerOneScore, int playerTwoScore, int playerThreeScore, int playerFourScore, String playerOneName, String playerTwoName, String playerThreeName, String playerFourName, int roundCount) {
+        this.playerOneScore = playerOneScore;
+        this.playerTwoScore = playerTwoScore;
+        this.playerThreeScore = playerThreeScore;
+        this.playerFourScore = playerFourScore;
+        this.playerOneName = playerOneName;
+        this.playerTwoName = playerTwoName;
+        this.playerThreeName = playerThreeName;
+        this.playerFourName = playerFourName;
+        this.roundCount = roundCount;
     }
 
     public int getRoundId() {

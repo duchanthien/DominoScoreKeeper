@@ -3,6 +3,7 @@ package com.example.william.dominoscorekeeper;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,7 +18,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
     DaoRound daoRound;
     List<Roundmodel> roundmodels;
@@ -32,7 +33,8 @@ public class ResultActivity extends AppCompatActivity {
 
     String playerOneName = "", playerTwoName = "", playerThreeName = "", playerFourName = " ";
 
-    Button btnNewGame, btnContinue;
+    Button btnEndGame, btnContinue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +52,11 @@ public class ResultActivity extends AppCompatActivity {
     public void initViews() {
         lv = (ListView) findViewById(R.id.listview_result);
 
-        btnContinue = (Button)findViewById(R.id.btn_continue);
-        btnNewGame = (Button)findViewById(R.id.btn_new_game);
+        btnContinue = (Button) findViewById(R.id.btn_continue);
+        btnEndGame = (Button) findViewById(R.id.btn_end_game);
+
+        btnContinue.setOnClickListener(this);
+        btnEndGame.setOnClickListener(this);
 
         tvPlayerOneName = (TextView) findViewById(R.id.tv_playerone_name);
         tvPlayerTwoName = (TextView) findViewById(R.id.tv_playertwo_name);
@@ -118,5 +123,23 @@ public class ResultActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent();
         setResult(RESULT_OK);
+        finish();
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_continue:
+                //Intent intent = new Intent();
+                setResult(RESULT_OK);
+                finish();
+                break;
+            case R.id.btn_end_game:
+                //Intent intent2 = new Intent();
+                setResult(RESULT_CANCELED);
+                finish();
+                break;
+        }
     }
 }

@@ -66,10 +66,10 @@ public class ResultAdapter extends BaseAdapter {
 
             viewHolder.tvRound = (TextView) view.findViewById(R.id.tvround);
             //viewHolder.tvGame = (TextView)view.findViewById(R.id.tv_game);
-            viewHolder.tvPlayerOneName = (TextView) view.findViewById(R.id.tv_playerone_name);
+         /*   viewHolder.tvPlayerOneName = (TextView) view.findViewById(R.id.tv_playerone_name);
             viewHolder.tvPlayerTwoName = (TextView) view.findViewById(R.id.tv_playertwo_name);
             viewHolder.tvPlayerThreeName = (TextView) view.findViewById(R.id.tv_playerthree_name);
-            viewHolder.tvPlayerFourName = (TextView) view.findViewById(R.id.tv_playerfour_name);
+            viewHolder.tvPlayerFourName = (TextView) view.findViewById(R.id.tv_playerfour_name);*/
 
             viewHolder.tvPlayerOneScore = (TextView) view.findViewById(R.id.tv_playerone_score);
             viewHolder.tvPlayerTwoScore = (TextView) view.findViewById(R.id.tv_playertwo_score);
@@ -80,12 +80,12 @@ public class ResultAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
 
-        viewHolder.tvRound.setText(list.get(i).getRoundId() + "");
+        viewHolder.tvRound.setText("Round: "+list.get(i).getRoundCount() + "");
 
-        viewHolder.tvPlayerOneName.setText(list.get(i).getPlayerOneName());
+       /* viewHolder.tvPlayerOneName.setText(list.get(i).getPlayerOneName());
         viewHolder.tvPlayerTwoName.setText(list.get(i).getPlayerTwoName());
         viewHolder.tvPlayerThreeName.setText(list.get(i).getPlayerThreeName());
-        viewHolder.tvPlayerFourName.setText(list.get(i).getPlayerFourName());
+        viewHolder.tvPlayerFourName.setText(list.get(i).getPlayerFourName());*/
 
         viewHolder.tvPlayerOneScore.setText(String.valueOf(list.get(i).getPlayerOneScore()));
         viewHolder.tvPlayerTwoScore.setText(String.valueOf(list.get(i).getPlayerTwoScore()));
